@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<h2>Add Student</h2>
+
+<form method="post">
+
+    <label>Register Number</label>
+    <input type="text" name="register_number" required>
+
+    <label>Name</label>
+    <input type="text" name="name" required>
+
+    <label>Age</label>
+    <input type="number" name="age" required>
+
+    <label>Gender</label>
+    <select name="sex">
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+
+    <label>Father Name</label>
+    <input type="text" name="father_name">
+
+    <label>Mother Name</label>
+    <input type="text" name="mother_name">
+
+    <label>Phone</label>
+    <input type="text" name="phone">
+
+    <label>Email</label>
+    <input type="email" name="email">
+
+    <label>Address</label>
+    <textarea name="address"></textarea>
+
+    <label>Department</label>
+    <input type="text" name="department">
+
+    <label>Course</label>
+    <select name="course_id">
+        {% for c in courses %}
+        <option value="{{ c.course_id }}">{{ c.course_name }}</option>
+        {% endfor %}
+    </select>
+
+    <button type="submit">Save</button>
+
+</form>
+
+</body>
+</html>

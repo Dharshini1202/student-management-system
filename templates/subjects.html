@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Subjects{% endblock %}
+
+{% block content %}
+<h2>Subjects for {{ course.course_name }}</h2>
+
+<a href="/add-subject/{{ course.course_id }}">+ Add Subject</a>
+<br><br>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Subject Name</th>
+        <th>Credits</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for sub in subjects %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ sub.subject_name }}</td>
+        <td>{{ sub.credits }}</td>
+        <td>
+            <a href="/edit-subject/{{ sub.subject_id }}">Edit</a> |
+            <a href="/delete-subject/{{ sub.subject_id }}/{{ course.course_id }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="/courses">← Back to Courses</a>
+{% endblock %}

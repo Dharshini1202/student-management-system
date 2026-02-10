@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Subject</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+<h2>Add Subject</h2>
+
+<form method="post">
+    <label>Subject Name:</label><br>
+    <input type="text" name="subject_name" required><br><br>
+
+    <label>Credits:</label><br>
+    <input type="number" name="credits" required><br><br>
+
+    <button type="submit">Save</button>
+</form>
+
+<br>
+<a href="/subjects/{{ course_id }}">Back</a>
+
+</body>
+</html>

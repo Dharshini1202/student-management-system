@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Courses{% endblock %}
+
+{% block content %}
+<h2>Course Details</h2>
+
+<a href="/add-course">+ Add Course</a>
+<br><br>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Department</th>
+        <th>Course Name</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for course in courses %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ course.department }}</td>
+        <td>
+            <a href="/subjects/{{ course.course_id }}">
+                {{ course.course_name }}
+            </a>
+        </td>
+        <td>
+            <a href="/edit-course/{{ course.course_id }}">Edit</a> |
+            <a href="/delete-course/{{ course.course_id }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

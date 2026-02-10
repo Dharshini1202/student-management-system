@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body style="background-color:#f1f5f9;">
+
+<div style="
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+">
+
+    <div style="
+        background:#fff;
+        padding:30px;
+        width:380px;
+        border-radius:10px;
+        box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    ">
+
+        <h2 style="text-align:center; margin-bottom:20px;">
+            Create Admin Account
+        </h2>
+
+        <form method="post">
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Password</label>
+            <input type="password" name="password" required>
+
+            <button type="submit" style="width:100%; margin-top:10px;">
+                Create Account
+            </button>
+
+        </form>
+
+        <p style="text-align:center; margin-top:15px;">
+            Already have an account?
+            <a href="/">Login</a>
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

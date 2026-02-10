@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div style="
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+">
+
+    <div style="
+        width:360px;
+        background:#ffffff;
+        padding:32px;
+        border-radius:16px;
+        box-shadow:0 20px 45px rgba(0,0,0,0.08);
+    ">
+
+        <h2 style="
+            text-align:center;
+            margin-bottom:6px;
+            font-size:24px;
+            font-weight:700;
+        ">
+            Admin Login
+        </h2>
+
+        <p style="
+            text-align:center;
+            font-size:14px;
+            color:#64748b;
+            margin-bottom:22px;
+        ">
+            Sign in to Student Management System
+        </p>
+
+        <form method="post">
+
+            <label>Email</label>
+            <input type="email" name="email" placeholder="admin@example.com" required>
+
+            <label>Password</label>
+            <input type="password" name="password" placeholder="••••••••" required>
+
+            <button type="submit" style="
+                width:100%;
+                margin-top:10px;
+            ">
+                Login
+            </button>
+
+        </form>
+
+        <div style="
+            display:flex;
+            justify-content:space-between;
+            margin-top:18px;
+            font-size:14px;
+        ">
+            <a href="/forgot-password">Forgot password?</a>
+            <a href="/register">Create account</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
